@@ -1,9 +1,10 @@
-import { Typography } from '@mui/material';
 import './App.css';
+import LayoutContainer from './shared/LayoutContainer';
 
 function App() {
   return (
-    <Typography variant='h2'>Welcome</Typography>
+    <LayoutContainer>
+    </LayoutContainer>
   );
 }
 
