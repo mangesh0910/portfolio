@@ -1,5 +1,5 @@
 import './App.css';
-import Navbar from './components/navbar';
+import Navbar from './components/navbar/Navbar';
 import LayoutContainer from './shared/LayoutContainer';
 
 function App() {

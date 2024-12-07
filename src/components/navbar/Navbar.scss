@@ -1,0 +1,83 @@
+@import "../../styles/colors.scss";
+
+.nav-container {
+    .container {
+        border: 0px solid gray;
+        // Padding for small screens
+        padding-top: 0.5rem; /* 2 units in xs (default spacing unit: 8px) */
+        padding-bottom: 0.5rem;
+
+        // Padding for medium screens and up
+        @media (min-width: 600px) {
+            padding-top: 0.75rem; /* 3 units in sm */
+            padding-bottom: 0.75rem;
+        }
+
+        /* AppBarStyles.scss */
+        .app-bar {
+            background-color: $white-color !important; /* Ensure it overrides */
+            box-shadow: none !important; /* Ensure it overrides */
+
+            /* Handle padding for xs and sm breakpoints */
+            padding-left: 0; /* Default for xs */
+            padding-right: 0;
+
+            @media (min-width: 600px) {
+                padding-left: 16px; /* Equivalent to 4 * 4px */
+                padding-right: 16px;
+            }
+            .toolbar {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .logo {
+                    width: 140px;
+                    height: 40px;
+                }
+                /* BoxStyles.scss */
+                .menu-container {
+                    display: flex;
+                    gap: 32px;
+
+                    // Add media query for xs and md breakpoints
+                    @media (max-width: 600px) {
+                        display: none;
+                    }
+                    @media (min-width: 900px) {
+                        display: flex;
+                    }
+                    .menu-text {
+                        color: $black-color;
+                        font-size: 20px;
+                        font-weight: 600;
+                        text-transform: none;
+                    }
+                }
+                .button-container {
+                    display: flex;
+                    @media (max-width: 600px) {
+                        display: none;
+                    }
+
+                    @media (min-width: 900px) {
+                        display: flex;
+                    }
+                    .button-text {
+                        background-color: $black-color;
+                        text-transform: none;
+                        padding: 16px 20px; // py: 2 and px: 2.5 converted to padding
+                    }
+                }
+                .small-screen-menu-container {
+                    display: flex;
+                    @media (max-width: 600px) {
+                        display: flex; // xs: 'flex', md: 'none'
+                    }
+                    @media (min-width: 600px) {
+                        display: none; // for medium devices (md)
+                    }
+                }
+            }
+        }
+    }
+}
